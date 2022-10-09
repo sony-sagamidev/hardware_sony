@@ -1,0 +1,26 @@
+android_app {
+    name: "XperiSettings",
+    privileged: true,
+    system_ext_specific: true,
+    platform_apis: true,
+    certificate: "platform",
+
+    srcs: [
+        "src/**/*.kt",
+        "src/**/*.java",
+    ],
+
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx.core_core",
+        "kotlin-stdlib",
+        "androidx.preference_preference",
+        "vendor.semc.hardware.display-V2.0-java",
+        "vendor.semc.hardware.display-V2.1-java",
+        "vendor.semc.hardware.display-V2.2-java",
+        "vendor.semc.hardware.display-V2.3-java",
+        "vendor.semc.hardware.display-V2.4-java"
+    ],
+}
+

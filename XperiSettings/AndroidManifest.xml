@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="egg.lab.extra"
+          android:versionCode="4" android:versionName="1.4" android:sharedUserId="android.uid.system">
+
+    <!--   -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:exported="true">
+
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS"/>
+            </intent-filter>
+              <meta-data android:name="com.android.settings.category"
+                     android:value="com.android.settings.category.ia.display" />
+
+             <!-- Add a summary text when the setting is displayed -->
+              <meta-data android:name="com.android.settings.summary"
+                     android:resource="@string/display_dashboard_summary"/>
+        </activity>
+
+    </application>
+
+
+</manifest>
